@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+html{
+    max-width: 100vw;
+}
+body{
+    font-size: 120%;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(15 15, 15);
+    max-width: 100vw;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+i{
+    color: white;
+}
+h1, h2, h3{
+    font-family: "Mogra", system-ui;
+}
+.header{
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+    background:linear-gradient(0deg, rgb(15, 15, 15), rgba(0, 0, 0, 0), rgb(0, 0, 0)), url("../img/cross.jpg");
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    background-color: #00000033;
+    z-index: 9999;
+}
+.navbar ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.navbar a{
+    min-height: 100%;
+    color: white;
+    padding: 15px;
+    display: block;
+    position: relative;
+}
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+.navbar :hover::after,
+.navbar :focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}  
+.navbar a:hover::after,
+.navbar a:focus::after{
+    opacity: 1;
+}
+.navbar a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+  
+.navbar a:hover::after,
+.navbar a:focus::after{
+    transform: scale(1);
+}
+.navbar div{
+    min-height: 100%;
+}
+.landing{
+    padding-top: 150px;
+}
+.body{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    background-color: rgba(229, 0, 195, 0.736);
+}
