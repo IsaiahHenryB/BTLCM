@@ -22,12 +22,28 @@
     font-weight: 400;
     font-style: normal;
 }
-    
+/* Setting up color vars */
+:root{
+    --color1: #222831;
+    --color2: #31363F;
+    --color3: #76ABAE;
+    --color4: #EEEEEE;
+    --color5: #00000053;
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --color3: #92C7CF;
+        --color2: #AAD7D9;
+        --color1: #FBF9F1;
+        --color4: #0c0c0c;
+        --color5: #ffffff9a;
+    }
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: var(--color4);
     font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -38,7 +54,7 @@ html{
 }
 body{
     font-size: 120%;
-    background-color: rgb(15 15, 15);
+    background-color: var(--color2);
     max-width: 100vw;
 }
 ul{
@@ -48,12 +64,15 @@ a{
     text-decoration: none;
 }
 i{
-    color: white;
+    color: var(--color4);
 }
 h1, h2, h3{
     font-family: "Kalam", cursive;
     font-weight: 500;
     font-style: normal;
+}
+.blue{
+    color: var(--color3);
 }
 .header{
     display:flex;
@@ -61,8 +80,7 @@ h1, h2, h3{
     align-items: center;
     min-height: 80vh;
     width: 100%;
-    background:linear-gradient(0deg, rgb(15, 15, 15), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.182)), url("../img/cross.jpg");
-    background-size: cover;
+    background-color: var(--color1);
 }
 .navbar{
     display: flex;
@@ -70,7 +88,7 @@ h1, h2, h3{
     justify-content: center;
     width: 100%;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.293);
+    background-color: var(--color5);
     z-index: 9999;
 }
 .navbar ul{
@@ -80,7 +98,7 @@ h1, h2, h3{
 }
 .navbar a{
     min-height: 100%;
-    color: white;
+    color: var(--color4);
     padding: 15px;
     display: block;
     position: relative;
@@ -92,7 +110,7 @@ h1, h2, h3{
     left: 0;
     width: 100%;
     height: 0.1em;
-    background-color: #ffffff;
+    background-color: var(--color4);
     opacity: 0;
     transition: opacity 300ms, transform 300ms;
 }
@@ -120,15 +138,44 @@ h1, h2, h3{
 }
 .landing{
     padding-top: 150px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.landing div{
+    padding: 15px;
+    margin: 20px;
+    max-width: 60vw;
+}
+.linkbox{
+    background-color: var(--color3);
+    padding: 10px;
 }
 .body{
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
-    background-color: rgba(229, 0, 0, 0.034);
+    background-color: var(--color2);
 }
 .body section{
     padding: 10px;
     display: flex;
     flex-flow: row nowrap;
+    min-height: 60vh;
+}
+.spacedown{
+    margin-top: 100px;
+}
+/* footer styles */
+.footer{
+    background-color: var(--color3);
+    min-height: 20vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.footer div{
+    min-height: 20vh;
+}
+.copy{
+    background-color: var(--color1);
+    padding: 10px;
 }
