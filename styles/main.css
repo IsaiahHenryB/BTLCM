@@ -1,9 +1,34 @@
+/* Font Styles */
+.kalam-light {
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.kalam-regular {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+.exo-2 {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+    
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: white;
-    font-family: "Gantari", sans-serif;
+    font-family: "Exo 2", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -12,7 +37,6 @@ html{
 }
 body{
     font-size: 120%;
-    font-family: 'Lato', sans-serif;
     background-color: rgb(15 15, 15);
     max-width: 100vw;
 }
@@ -26,7 +50,9 @@ i{
     color: white;
 }
 h1, h2, h3{
-    font-family: "Mogra", system-ui;
+    font-family: "Kalam", cursive;
+    font-weight: 500;
+    font-style: normal;
 }
 .header{
     display:flex;
@@ -34,7 +60,7 @@ h1, h2, h3{
     align-items: center;
     min-height: 80vh;
     width: 100%;
-    background:linear-gradient(0deg, rgb(15, 15, 15), rgba(0, 0, 0, 0), rgb(0, 0, 0)), url("../img/cross.jpg");
+    background:linear-gradient(0deg, rgb(15, 15, 15) 10%, rgba(0, 0, 0, 0)80%, rgb(0, 0, 0) 10%), url("../img/cross.jpg");
     background-size: cover;
 }
 .navbar{
@@ -43,7 +69,7 @@ h1, h2, h3{
     justify-content: center;
     width: 100%;
     position: fixed;
-    background-color: #00000033;
+    background-color: #00000027;
     z-index: 9999;
 }
 .navbar ul{
