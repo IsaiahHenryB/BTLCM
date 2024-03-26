@@ -28,7 +28,7 @@
     --color2: #31363F;
     --color3: #76ABAE;
     --color4: #EEEEEE;
-    --color5: #00000053;
+    --color5: #1d1d1da0;
     --color6: #98e3e7;
     --color7: #d1fdff;
 }
@@ -38,7 +38,7 @@
         --color2: #AAD7D9;
         --color1: #FBF9F1;
         --color4: #0c0c0c;
-        --color5: #ffffff9a;
+        --color5: #ffffffc4;
         --color6: #002520;
         --color7: #254045;
     }
@@ -166,6 +166,7 @@ span{
 .linkbox:hover{
     background-color: var(--color1);
     color: var(--color6);
+    border: 1px solid var(--color6);
 }
 .body{
     display: flex;
@@ -181,6 +182,10 @@ span{
 }
 .body section div{
     padding: 15px;
+}
+.calendar{
+    width: 43vw;
+    height: 35vw;
 }
 p a{
     color: var(--color6);
@@ -204,4 +209,20 @@ p a:hover{
 .copy{
     background-color: var(--color1);
     padding: 10px;
+}
+/* Small Screen Styles */
+@media only screen and (max-width: 1200px){
+    .landing{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .body section{
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .calendar{
+        width: 80vw;
+        height: 60vw;
+    }
 }
