@@ -29,6 +29,8 @@
     --color3: #76ABAE;
     --color4: #EEEEEE;
     --color5: #00000053;
+    --color6: #98e3e7;
+    --color7: #d1fdff;
 }
 @media (prefers-color-scheme: light) {
     :root {
@@ -37,6 +39,8 @@
         --color1: #FBF9F1;
         --color4: #0c0c0c;
         --color5: #ffffff9a;
+        --color6: #002520;
+        --color7: #254045;
     }
 }
 *{
@@ -71,6 +75,14 @@ h1, h2, h3{
     font-weight: 500;
     font-style: normal;
 }
+span{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.italic{
+    font-style: italic;
+    font-weight: 300;
+}
 .blue{
     color: var(--color3);
 }
@@ -86,6 +98,7 @@ h1, h2, h3{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    align-items: center;
     width: 100%;
     position: fixed;
     background-color: var(--color5);
@@ -150,6 +163,10 @@ h1, h2, h3{
     background-color: var(--color3);
     padding: 10px;
 }
+.linkbox:hover{
+    background-color: var(--color1);
+    color: var(--color6);
+}
 .body{
     display: flex;
     flex-flow: column nowrap;
@@ -161,6 +178,15 @@ h1, h2, h3{
     display: flex;
     flex-flow: row nowrap;
     min-height: 60vh;
+}
+.body section div{
+    padding: 15px;
+}
+p a{
+    color: var(--color6);
+}
+p a:hover{
+    color: var(--color7);
 }
 .spacedown{
     margin-top: 100px;
